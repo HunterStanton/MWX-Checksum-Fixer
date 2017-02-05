@@ -46,6 +46,7 @@ namespace MWXChecksumFixer
 
                     // Overwrite the adler32 sum that is stored in the savegame
                     writer.BaseStream.Position = 0x8;
+
                     if (args[1] == "big")
                     {
                         byte[] lol = new byte[3];
@@ -54,11 +55,13 @@ namespace MWXChecksumFixer
                         sum = BitConverter.ToUInt32(sumStorage, 0);
                         writer.Write(sum);
                     }
-                    if (args[1] == "little")
+
+                    else if (args[1] == "little")
                     {
                         sum = (uint)adler32.Value;
                         writer.Write(sum);
                     }
+
                     else
                     {
                         System.Console.WriteLine("Invalid endian \"" + args[1] + "\" entered.");
