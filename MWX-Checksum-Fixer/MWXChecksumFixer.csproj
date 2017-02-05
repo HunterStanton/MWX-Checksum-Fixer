@@ -7,8 +7,8 @@
     <ProjectGuid>{C11F208A-D37C-41C8-A9DF-9FDC112F0B17}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MWX_Checksum_Fixer</RootNamespace>
-    <AssemblyName>MWX-Checksum-Fixer</AssemblyName>
+    <RootNamespace>MWXChecksumFixer</RootNamespace>
+    <AssemblyName>MWXChecksumFixer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
