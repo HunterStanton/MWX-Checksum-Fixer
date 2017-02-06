@@ -36,7 +36,7 @@ namespace MWXChecksumFixer
                     reader.BaseStream.Position = 0x8;
                     uint origChecksum = reader.ReadUInt32();
 
-                    // Put the entire savegame after 0x500 (which is the data that is checksummed by the game) into a buffer
+                    // Put the entire savegame after 0x480 (which is the data that is checksummed by the game) into a buffer
                     reader.BaseStream.Position = 0x480;
                     byte[] buffer = reader.ReadBytes((int)reader.BaseStream.Length - 0x480);
 
